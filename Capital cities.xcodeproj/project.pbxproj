@@ -12,6 +12,8 @@
 		723217C1211B78670092A944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723217BF211B78670092A944 /* Main.storyboard */; };
 		723217C3211B78680092A944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723217C2211B78680092A944 /* Assets.xcassets */; };
 		723217C6211B78680092A944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723217C4211B78680092A944 /* LaunchScreen.storyboard */; };
+		723217D0211B78DA0092A944 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 723217CF211B78DA0092A944 /* MapKit.framework */; };
+		723217D2211B7A350092A944 /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723217D1211B7A350092A944 /* Capital.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		723217C2211B78680092A944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		723217C5211B78680092A944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		723217C7211B78680092A944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		723217CD211B78D30092A944 /* Capital cities.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Capital cities.entitlements"; sourceTree = "<group>"; };
+		723217CF211B78DA0092A944 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		723217D1211B7A350092A944 /* Capital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				723217D0211B78DA0092A944 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 			children = (
 				723217BA211B78670092A944 /* Capital cities */,
 				723217B9211B78670092A944 /* Products */,
+				723217CE211B78DA0092A944 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +61,24 @@
 		723217BA211B78670092A944 /* Capital cities */ = {
 			isa = PBXGroup;
 			children = (
+				723217CD211B78D30092A944 /* Capital cities.entitlements */,
 				723217BB211B78670092A944 /* AppDelegate.swift */,
 				723217BD211B78670092A944 /* ViewController.swift */,
 				723217BF211B78670092A944 /* Main.storyboard */,
+				723217D1211B7A350092A944 /* Capital.swift */,
 				723217C2211B78680092A944 /* Assets.xcassets */,
 				723217C4211B78680092A944 /* LaunchScreen.storyboard */,
 				723217C7211B78680092A944 /* Info.plist */,
 			);
 			path = "Capital cities";
+			sourceTree = "<group>";
+		};
+		723217CE211B78DA0092A944 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				723217CF211B78DA0092A944 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +113,14 @@
 				TargetAttributes = {
 					723217B7211B78670092A944 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -137,6 +162,7 @@
 			files = (
 				723217BE211B78670092A944 /* ViewController.swift in Sources */,
 				723217BC211B78670092A944 /* AppDelegate.swift in Sources */,
+				723217D2211B7A350092A944 /* Capital.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +306,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Capital cities/Capital cities.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9YH3LZQ69V;
 				INFOPLIST_FILE = "Capital cities/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,7 +325,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Capital cities/Capital cities.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9YH3LZQ69V;
 				INFOPLIST_FILE = "Capital cities/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
