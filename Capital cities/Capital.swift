@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-final class Capital: NSObject, MKAnnotation {
+class Capital: NSObject, MKAnnotation {
     
     // MARK: - Properties
     
